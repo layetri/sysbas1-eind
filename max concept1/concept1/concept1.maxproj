@@ -2,7 +2,7 @@
 	"name" : "concept1",
 	"version" : 1,
 	"creationdate" : 3669212515,
-	"modificationdate" : 3669222739,
+	"modificationdate" : 3670763932,
 	"viewrect" : [ 25.0, 106.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -21,12 +21,22 @@
 				"local" : 1
 			}
 ,
+			"pfft-rain.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
 			"master.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
 ,
-			"pfft-rain.maxpat" : 			{
+			"resoSaw.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"echoArp.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
