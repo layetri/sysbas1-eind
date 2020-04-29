@@ -2,8 +2,8 @@
 	"name" : "concept1",
 	"version" : 1,
 	"creationdate" : 3669212515,
-	"modificationdate" : 3670763932,
-	"viewrect" : [ 25.0, 106.0, 300.0, 500.0 ],
+	"modificationdate" : 3671029749,
+	"viewrect" : [ 113.0, 167.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -26,11 +26,6 @@
 				"local" : 1
 			}
 ,
-			"master.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
 			"resoSaw.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
@@ -40,6 +35,33 @@
 				"kind" : "patcher",
 				"local" : 1
 			}
+,
+			"master.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"simpleSaw.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"VocoSubpatch.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+
+		}
+,
+		"data" : 		{
+			"VIDEOS-rss.php.xml" : 			{
+				"kind" : "xmlfile",
+				"local" : 1
+			}
+
+		}
+,
+		"externals" : 		{
 
 		}
 
