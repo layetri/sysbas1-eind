@@ -1,15 +1,57 @@
 <!DOCTYPE html>
 <html lang="nl">
     <head>
+        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/resources/world.css">
+
         <script src="../Library/p5.min.js"></script>
         <script src="../Library/addons/p5.dom.min.js"></script>
         <script src="../Library/addons/p5.sound.min.js"></script>
         <script src="../Library/socket_io.js"></script>
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
         <script src="../oscLib.js"></script>
-        <script src="./sketch"></script>
-        <title>Eindopdracht v1</title>
-        <style> body {padding: 0; margin: 0; background-color:#DDDDDD; overflow: hidden;} </style>
+
+        <script src="/resources/Player.js"></script>
+        <script src="/resources/World.js"></script>
+        <script src="/resources/Terrain.js"></script>
+        <script src="/resources/Obstacle.js"></script>
+        <script src="/resources/sketch.js"></script>
+
+        <title>Eindopdracht SYSBAS 19/20</title>
     </head>
+
     <body>
+        <h4 class="absolute text-white ml-2 mt-10 bit-regular text-4xl">Connect to mt.layetri.nl:9235</h4>
+        <h4 class="absolute text-white ml-2 mt-20 bit-regular text-lg">
+            <small class="text-sm">&copy;</small> 2020 Elmer Makkinga and Daniel Kamp
+        </h4>
+        <input class="absolute px-3 m-2 bit-regular text-xl" style="width: 4rem;" type="number" value="120" id="len_box" placeholder="length">
+
+        <div class="infoBar">
+            <div class="container mx-auto">
+                <div class="flex text-center">
+                    <div class="flex-auto w-1/5 text-white">
+                        <h4 class="text-5xl m-0 bit-regular" id="speedDisplay">0</h4>
+                        <small class="text-lg bit-regular uppercase">speed</small>
+                    </div>
+                    <div class="flex-auto w-1/5 text-white">
+                        <h4 class="text-5xl m-0 bit-regular" id="spinDisplay">0</h4>
+                        <small class="text-lg bit-regular uppercase">angle</small>
+                    </div>
+                    <div class="flex-auto w-1/5">
+                        <h4 class="text-5xl m-0 bit-regular cursor-pointer text-green-200" id="startBtn">
+                            start
+                        </h4>
+                    </div>
+                    <div class="flex-auto w-1/5 text-white">
+                        <h4 class="text-2xl m-0 bit-regular" id="haltBtn">stop</h4>
+                        <small class="text-lg bit-regular uppercase"></small>
+                    </div>
+                    <div class="flex-auto w-1/5 text-white">
+                        <h4 class="text-5xl m-0 bit-regular" id="clock">0:00</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

@@ -21,7 +21,7 @@ let clients = {};
 function serverExist(port,id,callback) {
     let found = 0;
     for (let i in oscServer) {
-        if (oscServer[i] && oscServer[i].port == port) {
+        if (oscServer[i] && oscServer[i].port === port) {
             found = 1;
             oscServer[i].close();
             oscServer[i] = null;
@@ -85,8 +85,8 @@ function killOsc() {
  *///-------------------------------/
 
 //start the server listening on port 8001
-server.listen(8001,function() {
-    console.log("De server staat aan! Je kunt deze via localhost:8001 bereiken");
+server.listen(8001, '10.0.0.2', function() {
+    console.log("De server staat aan! Je kunt deze via YOUR_IP:8001 bereiken");
 });
 
 //zorg dat de server alle paths kan bereiken.
