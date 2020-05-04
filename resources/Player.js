@@ -39,7 +39,6 @@ class Player {
     }
     move() {
         this.gravity();
-        this.draw();
         this.collide();
 
         // Calculate xSpeed and xPosition
@@ -56,8 +55,26 @@ class Player {
         // OSC out: Player Z position
         client.sendMessage('/player/z', this.position.z);
 
+        // Calculate speed display values and emit them
+        let speed = this.speed, zSpeed = this.zSpeed, xSpeed = this.xSpeed;
+
+        // OSC out: Player speed
+        if(speed < 0) {speed *= -1}
+        client.sendMessage('/player/speed', speed);
+        // OSC out: Player xSpeed
+        if(xSpeed < 0) {xSpeed *= -1}
+        client.sendMessage('/player/xSpeed', xSpeed);
+        // OSC out: Player zSpeed
+        if(zSpeed < 0) {zSpeed *= -1}
+        client.sendMessage('/player/zSpeed', zSpeed);
+
+        // Draw the player orb
+        this.draw();
+
+        // Calibrate the camera
         calibrateViewer();
 
+        // Update the UI's speed display
         let v = Math.floor((this.speed / this.maxSpeed) * 100);
         if(v < 0) {v = v * -1}
         $('#speedDisplay').html(v);
@@ -79,7 +96,7 @@ class Player {
         $('#spinDisplay').html(xzAngle);
 
         // OSC out: Angle
-        client.sendMessage('/angle', (xzAngle + 180));
+        client.sendMessage('/player/angle', (xzAngle + 180));
     }
     gravity() {
         if(clock < length - 5) {
@@ -146,17 +163,12 @@ class Player {
         let offset = this.position.y;
         let base = 0.5 * (Math.pow((0 - (bounceTime / 2)), 2) / 50000);
 
-        console.log({total: bounceTime, spd: spd, max: this.maxSpeed})
-
         this.speed = this.maxSpeed;
-
 
         let interval = setInterval(() => {
             if(bouncedTime < bounceTime) {
                 let h = calcBounce(bouncedTime, bounceTime, offset) - base;
                 this.position.y = offset + h;
-
-                console.log({ypos: this.position.y, time: bouncedTime, off: offset});
 
                 redraw();
                 bouncedTime += 300;
@@ -173,10 +185,4 @@ class Player {
 
 function calcBounce(t, total, offset) {
     return 0.5 * (Math.pow(((t + 300) - (total / 2)), 2) / 50000);
-}
-
-function testBounce() {
-    player.selfControlled = true;
-    player.speed = player.maxSpeed;
-    player.bounceOff();
 }

@@ -27,25 +27,40 @@ let nightMode = false;
 let client, connect;
 
 // DOM functions
+
+// Start the game
 $(document).on('click', '#startBtn', function() {
-   started = true;
-   length = $('#len_box').val();
-   client.sendMessage('/started', 1);
-   interval = setInterval(function() {
+    // Enable the renderer
+    started = true;
+    // Set the game length to the user input value
+    length = $('#len_box').val();
+    // OSC message: Started
+    client.sendMessage('/started', 1);
+
+    // Start the clock cycle
+    interval = setInterval(function() {
        if(clock < length) {
+           // Increment the clock value
            clock++;
+           // Display the clock
            $('#clock').html(Math.floor(clock / 60)+':'+('0'+(clock % 60)).slice(-2));
+           // Transition to the end screen background in time for the game end
            if(clock === length - 5) {
                bgw = bg;
            }
+
+           // OSC message: Clock Update
+           client.sendMessage('/clock', clock);
        } else {
            clearInterval(interval);
+           client.sendMessage('/started', 0);
        }
-   }, 1000);
+    }, 1000);
 });
 
 $(document).on('click', '#haltBtn', function() {
    noLoop();
+   client.sendMessage('/started', 0);
 });
 
 $(document).keyup(function(e) {
@@ -134,6 +149,8 @@ function draw() {
             nightMode = true;
             bgw_bor = [1, 80];
 
+            // OSC event: Night Mode
+            client.sendMessage('/night', 1);
         }
 
         // Detect key changes
@@ -181,7 +198,9 @@ function calibrateViewer() {
     }
     viewer.lookAt(focus.x, focus.y, focus.z);
 }
+
 function handleKeys() {
+    // Handles user key input
     if(!player.selfControlled) {
         if (keyIsDown(LEFT_ARROW)) {
             player.spin('left');
@@ -203,6 +222,7 @@ function handleKeys() {
         }
 
         if (!keyIsPressed) {
+            // Decreases the player speed exponentially, for a smooth stop
             player.powered = false;
             if (player.speed > 0) {
                 player.speed = player.speed * Math.pow(0.99, player.speed + 0.5);
