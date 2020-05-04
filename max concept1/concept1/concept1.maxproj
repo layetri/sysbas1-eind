@@ -2,7 +2,7 @@
 	"name" : "concept1",
 	"version" : 1,
 	"creationdate" : 3669212515,
-	"modificationdate" : 3671177706,
+	"modificationdate" : 3671351757,
 	"viewrect" : [ 113.0, 166.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -51,12 +51,12 @@
 				"local" : 1
 			}
 ,
-			"master.maxpat" : 			{
+			"sawPad.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
 ,
-			"sawPad.maxpat" : 			{
+			"master.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -72,6 +72,10 @@
 		}
 ,
 		"externals" : 		{
+
+		}
+,
+		"other" : 		{
 
 		}
 
