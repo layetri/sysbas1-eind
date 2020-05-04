@@ -2,7 +2,7 @@ class Terrain {
     constructor(size) {
         this.x = 0;
         this.y = 0;
-        this.z = -(height/2) + 70;
+        this.z = 0;
         this.c = [];
         this.size = size;
         this.ySpd = random(10, 50);
@@ -35,7 +35,7 @@ class Terrain {
     }
     draw() {
         push();
-        rectMode(CORNER);
+
         noStroke();
 
         // If night mode is active, modify colors accordingly
@@ -58,7 +58,8 @@ class Terrain {
 
         // Predefine the terrain
         ambientMaterial(this.c);
-        translate(this.x, this.y + this.size/2, this.z);
+        translate(this.x + this.size/2, this.y + this.size/2, this.z + this.size/2);
+        rectMode(CORNER);
 
         // Draw the terrain
         box(this.size);

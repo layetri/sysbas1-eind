@@ -1,7 +1,7 @@
 # r0LL (Final Project, SYSBAS1B)
 
 ### Introduction
-This repository contains the files to @elmermakkinga and @layetri's final project for the SYSBAS course, semester 2, at HKU University of the Arts Utrecht, the Netherlands. The result is a game called "r0LL", written in P5.js, with a sound generation engine written in MaxMSP.
+This repository contains the files to @elmermakkinga and @layetri's final project for the Music & Technology SYSBAS course at HKU University of the Arts Utrecht, the Netherlands. The result is a game called "r0LL", written in P5.js, with a sound generation engine written in MaxMSP. Try it live at [layetri's website](https://mt.layetri.nl/projects/roll).
 
 ### Contents
 - [Installation](#installation)
@@ -10,7 +10,7 @@ This repository contains the files to @elmermakkinga and @layetri's final projec
 
 ## Installation
 To get started, make sure you have `nodejs` and `npm` installed. This project depends on `express`, which is already included in `package.json`.
-To install, browse to the project root directory and run `npm install`. NPM will now install the project dependencies. After this, you can use `npm start` to start the server at `localhost:6001`.
+To install, browse to the project root directory and run `npm install`. NPM will now install the project dependencies. After this, you can use `npm start` to start the server at `your_local_ip:8001`.
 
 ## Classes
 ### `Player` class
@@ -31,9 +31,18 @@ First, in the `setup()` of `sketch.js`, a new `Player()` is created with the `fo
 
 ### `Obstacle` class
 
+#### Methods
+#### Usage
+
 ### `Terrain` class
 
+#### Methods
+#### Usage
+
 ### `World` class
+
+#### Methods
+#### Usage
 
 ## OSC Routes
 ### `/started`
@@ -59,3 +68,6 @@ Boolean that indicates when `nightMode` is triggered. This message is emitted on
 
 ### `/clock`
 Integer that holds the current `clock` value in seconds. This message is sent with every `clock` update cycle.
+
+### `/endOfTime`
+Boolean that is triggered once when the End Of Time is reached (5 seconds before the game length). It holds a value of `1`.

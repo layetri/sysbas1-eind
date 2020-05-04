@@ -77,6 +77,8 @@ function setup() {
     createCanvas(windowWidth, (windowHeight - 100), WEBGL);
     angleMode(DEGREES);
 
+    debugMode();
+
     connect = new Connect();
     connect.connectToServer(function() {
         client = new Client();
@@ -163,6 +165,7 @@ function draw() {
 
         if(clock > length - 5 && !player.selfControlled) {
             player.selfControlled = true;
+            client.sendMessage('/endOfTime', 1);
         }
     } else {
         for(let i = 0; i < bgw.length; i++) {

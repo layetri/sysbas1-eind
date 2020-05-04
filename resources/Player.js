@@ -14,7 +14,7 @@ class Player {
         this.angle = 0;
         this.direction = "left";
         this.maxSpeed = 8;
-        this.maxSpinSpd = 3;
+        this.maxSpinSpd = 2;
         this.size = 20;
         this.renderDistance = fov / 2;
 
@@ -38,9 +38,6 @@ class Player {
         }
     }
     move() {
-        this.gravity();
-        this.collide();
-
         // Calculate xSpeed and xPosition
         this.xSpeed = this.speed * Math.cos(xzAngle * Math.PI/180);
         this.position.x += this.xSpeed;
@@ -54,6 +51,9 @@ class Player {
 
         // OSC out: Player Z position
         client.sendMessage('/player/z', this.position.z);
+
+        this.gravity();
+        this.collide();
 
         // Calculate speed display values and emit them
         let speed = this.speed, zSpeed = this.zSpeed, xSpeed = this.xSpeed;
@@ -103,7 +103,7 @@ class Player {
             if (!this.powered && this.position.y + (this.size / 2) > world.getCurrentY()) {
                 this.speed = this.speed * -1;
             } else if (this.position.y + this.size > world.getCurrentY()) {
-                this.position.y -= 10;
+                this.position.y = world.getCurrentY() - this.size;
             } else if (this.position.y + this.size < world.getCurrentY()) {
                 this.position.y += 1;
             } else {
@@ -135,9 +135,10 @@ class Player {
             let collisions = obstacles.filter(obs => {
                 let dx = obs.x - this.position.x;
                 let dz = obs.z - this.position.z;
+                let dy = obs.y - this.position.y;
                 let safeZone = (obs.s / 2) + (this.size / 2);
 
-                return dx < safeZone && dx > -1 * safeZone && dz < safeZone && dz > -1 * safeZone;
+                return dx < safeZone && dx > -1 * safeZone && dz < safeZone && dz > -1 * safeZone && dy < safeZone;
             });
 
             let spd = this.speed;
