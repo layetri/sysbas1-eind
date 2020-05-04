@@ -3,10 +3,9 @@ class Terrain {
         this.x = 0;
         this.y = 0;
         this.z = -(height/2) + 70;
-        this.width = size;
-        this.depth = size;
-        this.slope = 90;
         this.c = [];
+        this.size = size;
+        this.ySpd = random(10, 50);
     }
     init(index) {
         if(index > 0) {
@@ -15,8 +14,8 @@ class Terrain {
             // get a Y value for the Z ray
             let ZY = random(world.planes[index - 1].y - 20, world.planes[index - 1].y + 20);
             // get a Y value for the X ray
-            if(index > world.size / world.planeSize) {
-                let preX = world.planes[index - (world.size / world.planeSize)];
+            if(index > fov / world.planeSize) {
+                let preX = world.planes[index - (fov / world.planeSize)];
                 XY = random(preX.y - 20, preX.y + 20);
             }
 
@@ -36,7 +35,7 @@ class Terrain {
     }
     draw() {
         push();
-        rectMode(CENTER);
+        rectMode(CORNER);
         noStroke();
 
         // If night mode is active, modify colors accordingly
@@ -52,13 +51,17 @@ class Terrain {
             }
         }
 
+        if(clock > length - 6) {
+            this.y = this.y + this.ySpd;
+            this.ySpd = this.ySpd + 0.5;
+        }
+
         // Predefine the terrain
         ambientMaterial(this.c);
-        translate(this.x, this.y + this.width/2, this.z);
-        rotateX(this.slope);
+        translate(this.x, this.y + this.size/2, this.z);
 
         // Draw the terrain
-        box(this.width);
+        box(this.size);
         pop();
     }
 }

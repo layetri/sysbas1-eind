@@ -18,18 +18,26 @@ let ended = false;
 let bg = [168, 241, 255];
 let bgw = [168, 241, 255];
 let bgw_dir = ['up', 'up', 'up'];
+let bgw_bor = [180, 240];
 let lamp = [120, 120, 90];
 
 let nightMode = false;
+
+// OSC stuff
+let client, connect;
 
 // DOM functions
 $(document).on('click', '#startBtn', function() {
    started = true;
    length = $('#len_box').val();
+   client.sendMessage('/started', 1);
    interval = setInterval(function() {
        if(clock < length) {
            clock++;
            $('#clock').html(Math.floor(clock / 60)+':'+('0'+(clock % 60)).slice(-2));
+           if(clock === length - 5) {
+               bgw = bg;
+           }
        } else {
            clearInterval(interval);
        }
@@ -40,32 +48,37 @@ $(document).on('click', '#haltBtn', function() {
    noLoop();
 });
 
+$(document).keyup(function(e) {
+   if(e.keyCode === 32) {
+       testBounce();
+   } else if(e.keyCode === 27) {
+       noLoop();
+   }
+});
+
 // P5 functions
 function setup() {
     // Initialize the canvas at screen size
     createCanvas(windowWidth, (windowHeight - 100), WEBGL);
     angleMode(DEGREES);
 
+    connect = new Connect();
+    connect.connectToServer(function() {
+        client = new Client();
+        client.startClient('127.0.0.1', 9000);
+    });
+
     // Create a background for the splash screen
     background(bgw);
 
-    // debugging yay
-    // debugMode();
-    // frameRate(15);
-
     // Create the World
-    world = new World();
+    world = new World(fov, 200);
 
     // Initialize the World
-    world.init(fov, 200);
+    world.init();
 
     // Create the Player
     player = new Player(fov);
-
-    // Create the Obstacles
-    for(let i = 0; i < obstacleNum; i++) {
-        obstacles.push(new Obstacle);
-    }
 
     // Create a camera, the Viewer
     viewer = createCamera();
@@ -119,6 +132,8 @@ function draw() {
         // Transition to night at halftime
         if(clock === Math.floor(length / 2) && !nightMode) {
             nightMode = true;
+            bgw_bor = [1, 80];
+
         }
 
         // Detect key changes
@@ -128,18 +143,22 @@ function draw() {
         player.move();
         // Rotate the player orb
         player.rotate();
+
+        if(clock > length - 5 && !player.selfControlled) {
+            player.selfControlled = true;
+        }
     } else {
         for(let i = 0; i < bgw.length; i++) {
             let amt = Math.floor(random(0, 2));
 
             if(bgw_dir[i] === 'down') {
                 bgw[i] -= amt;
-                if(bgw[i] <= 180) {
+                if(bgw[i] <= bgw_bor[0]) {
                     bgw_dir[i] = 'up';
                 }
             } else if(bgw_dir[i] === 'up') {
                 bgw[i] += amt;
-                if(bgw[i] > 240) {
+                if(bgw[i] > bgw_bor[1]) {
                     bgw_dir[i] = 'down';
                 }
             }
@@ -153,47 +172,54 @@ function calibrateViewer() {
     // Function that calibrates the Viewer to always have the Player centered.
     let focus = player.position;
 
-    // calculate position around radius
-    let z = 300 * Math.sin(xzAngle * Math.PI/180);
-    let x = 300 * Math.cos(xzAngle * Math.PI/180);
+    if(!player.selfControlled) {
+        // calculate position around radius
+        let z = 300 * Math.sin(xzAngle * Math.PI / 180);
+        let x = 300 * Math.cos(xzAngle * Math.PI / 180);
 
-    viewer.setPosition(focus.x + x, focus.y -200, focus.z + z);
+        viewer.setPosition(focus.x + x, focus.y - 200, focus.z + z);
+    }
     viewer.lookAt(focus.x, focus.y, focus.z);
 }
 function handleKeys() {
-    if (keyIsDown(LEFT_ARROW)) {
-        player.spin('left');
-        player.spinertia();
-    }
-    if (keyIsDown(RIGHT_ARROW)) {
-        player.spin('right');
-        player.spinertia();
-    }
-    if (keyIsDown(UP_ARROW)) {
-        player.direction = 'up';
-        player.inertia();
-    }
-    if (keyIsDown(DOWN_ARROW)) {
-        player.direction = 'down';
-        player.inertia();
-    }
-
-    if (!keyIsPressed) {
-        if (player.speed > 0) {
-            player.speed = player.speed * Math.pow(0.99, player.speed + 0.5);
-            if (player.speed < 0.1) {
-                player.speed = 0;
-            }
-        } else if (player.speed < 0) {
-            player.speed = player.speed * Math.pow(0.99, -1 * (player.speed) + 0.5);
-            if (player.speed > -0.1) {
-                player.speed = 0;
-            }
+    if(!player.selfControlled) {
+        if (keyIsDown(LEFT_ARROW)) {
+            player.spin('left');
+            player.spinertia();
         }
-        if (player.spinSpeed > 0) {
-            player.spinSpeed -= 0.5;
-        } else if (player.spinSpeed < 0) {
-            player.spinSpeed += 0.5;
+        if (keyIsDown(RIGHT_ARROW)) {
+            player.spin('right');
+            player.spinertia();
+        }
+        if (keyIsDown(UP_ARROW)) {
+            player.direction = 'up';
+            player.inertia();
+            player.powered = true;
+        }
+        if (keyIsDown(DOWN_ARROW)) {
+            player.direction = 'down';
+            player.inertia();
+            player.powered = true;
+        }
+
+        if (!keyIsPressed) {
+            player.powered = false;
+            if (player.speed > 0) {
+                player.speed = player.speed * Math.pow(0.99, player.speed + 0.5);
+                if (player.speed < 0.1) {
+                    player.speed = 0;
+                }
+            } else if (player.speed < 0) {
+                player.speed = player.speed * Math.pow(0.99, -1 * (player.speed) + 0.5);
+                if (player.speed > -0.1) {
+                    player.speed = 0;
+                }
+            }
+            if (player.spinSpeed > 0) {
+                player.spinSpeed -= 0.5;
+            } else if (player.spinSpeed < 0) {
+                player.spinSpeed += 0.5;
+            }
         }
     }
 }

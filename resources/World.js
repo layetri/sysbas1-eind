@@ -1,27 +1,17 @@
 class World {
-    constructor() {
-        this.size = 400;
-        this.planeSize = 100;
-        this.planes = [];
-        this.width = 0;
-        this.depth = 0;
-        this.xStart = 0;
-        this.xEnd = 0;
-        this.zStart = 0;
-        this.zEnd = 0;
-    }
-    init(size, planeSize) {
-        this.size = size;
+    constructor(size, planeSize) {
         this.planeSize = planeSize;
-        this.zEnd = this.size;
-        this.xEnd = this.size;
-
-        this.fillArea([0, size], [0, size]);
-
-        // Calculate the width and depth properties (for easy reading)
-        this.width = this.size;
-        this.depth = this.size;
-
+        this.planes = [];
+        this.xStart = 0;
+        this.xEnd = size;
+        this.zStart = 0;
+        this.zEnd = size;
+    }
+    init() {
+        push();
+        rectMode(CORNER);
+        this.fillArea([this.xStart, this.xEnd], [this.zStart, this.zEnd]);
+        pop();
     }
     draw() {
         // Determine the necessary world size
@@ -41,10 +31,11 @@ class World {
         // Calculate the delta for X and Z axis bounds
         let xBound = xBounds[1] - xBounds[0];
         let zBound = zBounds[1] - zBounds[0];
+        let planes = Math.ceil( (zBound * xBound) / Math.pow(this.planeSize, 2));
 
         let prelen = this.planes.length;
 
-        for(let i = 0; i < Math.ceil( (zBound * xBound) / Math.pow(this.planeSize, 2)); i++) {
+        for(let i = 0; i < planes; i++) {
             // Iterates over the width of the world (X axis) for each depth of the world (Z axis)
             if(rayX < xBounds[1]) {
                 let ind = prelen + i;
@@ -55,24 +46,30 @@ class World {
 
                 // Recalculate the current Z axis position
                 if(rayInvert) {
-                    rayZ -= this.planes[ind].depth;
+                    rayZ -= this.planeSize;
                 } else {
-                    rayZ += this.planes[ind].depth;
+                    rayZ += this.planeSize;
                 }
 
                 // If the Z axis position is equal to the max size, invert the rendering process direction
                 if(rayZ >= zBounds[1] || rayZ < zBounds[0]) {
                     rayInvert = !rayInvert;
-                    rayX += this.planes[ind].width;
+                    rayX += this.planeSize;
 
                     // Prepare for the next Z axis ray
                     if(rayInvert) {
-                        rayZ -= this.planes[ind].depth;
+                        rayZ -= this.planeSize;
                     } else {
                         rayZ = zBounds[0];
                     }
                 }
             }
+        }
+
+        // Add obstacles for the newly created planes
+        obstacleNum = planes / 2;
+        for(let i = 0; i < obstacleNum; i++) {
+            obstacles.push(new Obstacle(xBounds, zBounds));
         }
     }
     applyFOV() {
@@ -205,16 +202,28 @@ class World {
         }
 
         if(removed) {
+            // Remove obstacles outside of rendered area
+            let rem = obstacles.filter(obs => {
+                return obs.x < this.xStart || obs.x > this.xEnd || obs.z < this.zStart || obs.z > this.zEnd;
+            });
+
+            for(let i = 0; i < rem.length; i++) {
+                let ind = obstacles.indexOf(rem[i]);
+                obstacles.splice(ind, 1);
+            }
+
             // fire OSC event "removed"
+            client.sendMessage('/planeRemoved', 1);
         }
         if(added) {
             // fire OSC event "added"
+            client.sendMessage('/planeAdded', 1);
         }
     }
     getCurrentPlane(x, z) {
         // Filters the planes array with the current location of the player
         return this.planes.filter(plane => {
-            return plane.x + plane.width > x && plane.z + plane.depth > z && plane.x <= x && plane.z <= z;
+            return plane.x + plane.size > x && plane.z + plane.size > z && plane.x <= x && plane.z <= z;
         });
     }
     getCurrentY(x, z) {
