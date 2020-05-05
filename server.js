@@ -85,7 +85,7 @@ function killOsc() {
  *///-------------------------------/
 
 //start the server listening on port 8001
-server.listen(8001, '10.0.0.2', function() {
+server.listen(8001, '127.0.0.1', function() {
     console.log("De server staat aan! Je kunt deze via YOUR_IP:8001 bereiken");
 });
 

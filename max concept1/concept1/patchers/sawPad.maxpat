@@ -39,13 +39,25 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-10",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 472.0, 222.0, 67.0, 22.0 ],
+					"text" : "delay 5000"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-16",
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 472.0, 337.589750111103058, 52.0, 22.0 ],
-					"text" : "0 10000"
+					"patching_rect" : [ 472.0, 337.589750111103058, 45.0, 22.0 ],
+					"text" : "0 5000"
 				}
 
 			}
@@ -68,7 +80,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 472.0, 230.0, 41.0, 22.0 ],
+					"patching_rect" : [ 472.0, 171.0, 41.0, 22.0 ],
 					"text" : "r END"
 				}
 
@@ -131,8 +143,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "multichannelsignal" ],
-					"patching_rect" : [ 306.0, 568.0, 134.0, 22.0 ],
-					"text" : "mc.sig~ 0.5 @chans 10"
+					"patching_rect" : [ 306.0, 568.0, 128.0, 22.0 ],
+					"text" : "mc.sig~ 0.5 @chans 5"
 				}
 
 			}
@@ -382,8 +394,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "multichannelsignal" ],
-					"patching_rect" : [ 237.0, 230.0, 114.0, 22.0 ],
-					"text" : "mc.sig~ @chans 10"
+					"patching_rect" : [ 232.0, 184.0, 108.0, 22.0 ],
+					"text" : "mc.sig~ @chans 5"
 				}
 
 			}
@@ -394,7 +406,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 237.0, 194.589750111103058, 74.0, 22.0 ],
+					"patching_rect" : [ 232.0, 142.0, 74.0, 22.0 ],
 					"text" : "deviate $1 0"
 				}
 
@@ -430,8 +442,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "multichannelsignal" ],
-					"patching_rect" : [ 50.0, 142.0, 114.0, 22.0 ],
-					"text" : "mc.sig~ @chans 10"
+					"patching_rect" : [ 50.0, 142.0, 108.0, 22.0 ],
+					"text" : "mc.sig~ @chans 5"
 				}
 
 			}
@@ -454,8 +466,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "multichannelsignal" ],
-					"patching_rect" : [ 50.0, 314.179500222206116, 120.0, 22.0 ],
-					"text" : "mc.saw~ @chans 10"
+					"patching_rect" : [ 50.0, 314.179500222206116, 114.0, 22.0 ],
+					"text" : "mc.saw~ @chans 5"
 				}
 
 			}
@@ -464,6 +476,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-60", 0 ],
 					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-14", 0 ],
+					"source" : [ "obj-10", 0 ]
 				}
 
 			}
@@ -634,7 +653,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-14", 0 ],
+					"destination" : [ "obj-10", 0 ],
 					"source" : [ "obj-4", 0 ]
 				}
 
