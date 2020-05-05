@@ -60,6 +60,9 @@ Float that indicates the current total speed of the `player` class.
 ### `/player/xSpeed` & `/player/zSpeed`
 Floats that indicate the current speed of the `player` class on both horizontal axises. These are a fraction of the total speed.
 
+### `/plane/removed` & `plane/added`
+Event emitted when planes are removed or added to the world.
+
 ### `/bouncing`
 Boolean that indicates when a `player.bounceOff()` event happens. It emits a `1` value while the player orb bounces, and results to `0` otherwise.
 

@@ -15,7 +15,9 @@ class World {
     }
     draw() {
         // Determine the necessary world size
-        this.applyFOV();
+        if(clock < length - 5) {
+            this.applyFOV();
+        }
 
         // Draw every plane in the world
         for(let i = 0; i < this.planes.length; i++) {
@@ -213,11 +215,11 @@ class World {
             }
 
             // fire OSC event "removed"
-            client.sendMessage('/planeRemoved', 1);
+            client.sendMessage('/plane/removed', 1);
         }
         if(added) {
             // fire OSC event "added"
-            client.sendMessage('/planeAdded', 1);
+            client.sendMessage('/plane/added', 1);
         }
     }
     getCurrentPlane(x, z) {
