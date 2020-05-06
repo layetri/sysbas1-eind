@@ -1,3 +1,12 @@
+// ======================================================================================= //
+//
+// *** r0LL v1.0 ***
+//
+// SYSBAS1B Final Project, 2019-2020@ HKU University of the Arts Utrecht, the Netherlands
+// © 2019-2020 Elmer Makkinga and Daniël Kamp
+//
+// ======================================================================================= //
+
 let player, viewer, world;
 let obstacles = [];
 let obstacleNum = 4;
