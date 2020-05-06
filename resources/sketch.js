@@ -2,7 +2,7 @@
 //
 // *** r0LL v1.0 ***
 //
-// SYSBAS1B Final Project, 2019-2020@ HKU University of the Arts Utrecht, the Netherlands
+// SYSBAS1B Final Project, 2019-2020 @ HKU University of the Arts Utrecht, the Netherlands
 // © 2019-2020 Elmer Makkinga and Daniël Kamp
 //
 // ======================================================================================= //
@@ -35,44 +35,44 @@ let nightMode = false;
 // OSC stuff
 let client, connect;
 
-// DOM functions
+// DOM functions //
+    // Start the game
+    $(document).on('click', '#startBtn', function() {
+        // Enable the renderer
+        started = true;
+        // Set the game length to the user input value
+        length = $('#len_box').val();
+        // OSC message: Started
+        client.sendMessage('/started', 1);
 
-// Start the game
-$(document).on('click', '#startBtn', function() {
-    // Enable the renderer
-    started = true;
-    // Set the game length to the user input value
-    length = $('#len_box').val();
-    // OSC message: Started
-    client.sendMessage('/started', 1);
+        // Start the clock cycle
+        interval = setInterval(function() {
+           if(clock < length) {
+               // Increment the clock value
+               clock++;
+               // Display the clock
+               $('#clock').html(Math.floor(clock / 60)+':'+('0'+(clock % 60)).slice(-2));
+               // Transition to the end screen background in time for the game end
+               if(clock === length - 5) {
+                   bgw = bg;
+               }
 
-    // Start the clock cycle
-    interval = setInterval(function() {
-       if(clock < length) {
-           // Increment the clock value
-           clock++;
-           // Display the clock
-           $('#clock').html(Math.floor(clock / 60)+':'+('0'+(clock % 60)).slice(-2));
-           // Transition to the end screen background in time for the game end
-           if(clock === length - 5) {
-               bgw = bg;
+               // OSC message: Clock Update
+               client.sendMessage('/clock', clock);
+           } else {
+               clearInterval(interval);
+               client.sendMessage('/started', 0);
            }
+        }, 1000);
+    });
 
-           // OSC message: Clock Update
-           client.sendMessage('/clock', clock);
-       } else {
-           clearInterval(interval);
-           client.sendMessage('/started', 0);
+    $(document).keyup(function(e) {
+        // Escape key as panic button
+        if(e.keyCode === 27) {
+           noLoop();
        }
-    }, 1000);
-});
-
-$(document).keyup(function(e) {
-    // Escape key as panic button
-    if(e.keyCode === 27) {
-       noLoop();
-   }
-});
+    });
+// ====== //
 
 // P5 functions
 function setup() {
