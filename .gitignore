@@ -1,5 +1,7 @@
 /node_modules/
 
+/.idea
+
 max concept1/.DS_Store
 
 resources/.DS_Store
@@ -9,3 +11,5 @@ src/.DS_Store
 .DS_Store
 
 EindOSC.maxpat
+
+IO_mapping.maxpat
