@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 434.0, 77.0, 1212.0, 873.0 ],
+		"rect" : [ 34.0, 77.0, 1298.0, 617.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,6 +38,195 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-336",
+					"linecount" : 7,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1672.397365808487393, 314.864545887708687, 150.0, 103.0 ],
+					"text" : "deze delay zit op meerdere plekken in de patch, hij genereert (klikloos) licht-willekeurige delaytijdens als er een bang in de tweede inlet binnenkomt"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-226",
+					"linecount" : 5,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 393.897371053695679, 390.477317714691139, 178.0, 75.0 ],
+					"text" : "hier worden macro-paramters gelinkt aan OSC berichten uit JavaScript en naar over de patch verdeeld met send/receive paren"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-198",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 52.897371053695679, 989.75250346064513, 157.0, 20.0 ],
+					"text" : "deze reverb is basically yafr"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-190",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1825.128064950307817, 102.403868103027321, 150.0, 48.0 ],
+					"text" : "genereert harmony die door elke module wordt gebruikt"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-369",
+					"linecount" : 5,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 2706.00000524520874, 291.864545887708687, 216.0, 75.0 ],
+					"text" : "zaagtand-oscillator waarvan de frequentie is gekoppeld aan de frequentie van een bandpass filter, door de resonantie te veranderen kan je van zaagtand naar sinus sweepen"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-366",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 2737.132983922958374, 1160.0, 150.0, 48.0 ],
+					"text" : "deze patch streamt willekeurige reclames van archive.org"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-363",
+					"linecount" : 5,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 2123.128064950307817, 264.432934170961403, 150.0, 75.0 ],
+					"text" : "hele grote zaagtand pad, het unisono effect wordt gemaakt met MC door de MC-kanelen tegen elkaar te detunen"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-361",
+					"linecount" : 4,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1132.929280519485474, 710.502502769231342, 156.0, 62.0 ],
+					"text" : "synthesizer die werkt door individuele samples in een  buffer te prikken en die te vertalen naar fft-bins"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-353",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 428.0, 662.641835081577483, 150.0, 34.0 ],
+					"text" : "bij een collision wordt de buffer granulair afgespeelt"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-285",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 240.631426572799683, 764.752503460645244, 288.0, 20.0 ],
+					"text" : "laatste 10 sec audio worden openomen in een buffer"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-225",
+					"linecount" : 4,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1577.684295773506165, 121.903868103027321, 216.163323163986206, 62.0 ],
+					"text" : "een macro parameter die de stabiliteit van de drone bepaalt door de modulatiediepte van de modulator-operators aan te passen"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-203",
+					"linecount" : 4,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1654.663323163986206, 19.977317714691139, 150.0, 62.0 ],
+					"text" : "de FM drone regenereert elke keer als de vorige noot afgelopen is, tenzij de gate dicht is "
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontface" : 3,
+					"fontsize" : 24.0,
+					"id" : "obj-195",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 393.897371053695679, 354.477317714691139, 178.000000000000057, 34.0 ],
+					"text" : "ROUTING BAY"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-101",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1104.0, 47.216637158393837, 152.0, 48.0 ],
+					"text" : "harmonyControl genereert random parameters voor de additieve synthesizer"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-24",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "bang", "" ],
+					"patching_rect" : [ 2660.679792451858702, 1112.443186233453616, 61.0, 22.0 ],
+					"text" : "jit.window"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-25",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 3006.0, 1670.0, 150.0, 20.0 ]
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-188",
 					"maxclass" : "newobj",
@@ -734,7 +923,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 252.0, 116.318800550698825, 61.0, 22.0 ],
-									"text" : "4 0 7"
+									"text" : "0 7 11"
 								}
 
 							}
@@ -2139,7 +2328,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 1533.0, 59.0, 1025.0, 894.0 ],
+						"rect" : [ 34.0, 77.0, 1298.0, 617.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -2167,6 +2356,80 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-57",
+									"linecount" : 6,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 1324.0, 283.0, 150.0, 89.0 ],
+									"presentation_linecount" : 6,
+									"text" : "als de plane/removed message binnenkomt, wordt er een nieuwe harmonie gegenereerd door de hamonyControl subpatcher"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-56",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 658.0, 266.0, 175.0, 20.0 ],
+									"text" : "deze twee worden niet gebruikt"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-51",
+									"linecount" : 7,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 12.0, 309.0, 97.0, 103.0 ],
+									"text" : "de y-positie wordt direct gemapt naar de paramter BRIGHT, want dat werkte wel prima eigenlijk"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-47",
+									"linecount" : 9,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 204.0, 309.0, 104.0, 131.0 ],
+									"presentation_linecount" : 7,
+									"text" : "de angle wordt geschaald zodat:\n180 graden = 0.\n0 graden = 1.\n360 graden = 1.\ndit voorkomt harde overgangen van 0 naar 1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-46",
+									"linecount" : 6,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 510.75, 369.0, 150.0, 89.0 ],
+									"presentation_linecount" : 6,
+									"text" : "verschil in snelheid van een seconde ten opzicht van de vorige seconde wordt gemeten en de max-parameter SPEED wordt ermee bestuurt"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-44",
+									"linecount" : 4,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 1159.0, 283.0, 150.0, 62.0 ],
+									"text" : "als de plane/added message binnenkomt, wordt de additieve patch getriggerd"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"id" : "obj-12",
 									"maxclass" : "newobj",
@@ -2210,7 +2473,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
-									"patching_rect" : [ 204.0, 276.0, 41.0, 22.0 ],
+									"patching_rect" : [ 189.0, 274.0, 41.0, 22.0 ],
 									"text" : "abs 0."
 								}
 
@@ -2222,7 +2485,7 @@
 									"numinlets" : 6,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 204.0, 238.0, 101.0, 22.0 ],
+									"patching_rect" : [ 189.0, 234.0, 101.0, 22.0 ],
 									"text" : "scale 0 360 -1. 1."
 								}
 
@@ -2775,7 +3038,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 209.5, 538.0, 30.0, 30.0 ]
+									"patching_rect" : [ 173.5, 532.0, 30.0, 30.0 ]
 								}
 
 							}
@@ -8035,7 +8298,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 2718.132983922958374, 1033.70386934679027, 70.0, 22.0 ],
-					"text" : "loadmess 0"
+					"text" : "loadmess 1"
 				}
 
 			}
@@ -8224,7 +8487,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1132.929280519485474, 675.363187098502635, 172.099290688832298, 33.0 ],
+					"patching_rect" : [ 1132.929280519485474, 675.363187098502635, 172.099290688832298, 34.0 ],
 					"text" : "FFT CLOUDS"
 				}
 
@@ -8250,7 +8513,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1325.602634191513062, 24.364547729492188, 103.897365808486938, 60.0 ],
+					"patching_rect" : [ 1325.602634191513062, 24.364547729492188, 103.897365808486938, 62.0 ],
 					"text" : "FM DRONE"
 				}
 
@@ -8263,7 +8526,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 15.627659916877747, 668.001392656423491, 137.0, 33.0 ],
+					"patching_rect" : [ 15.627659916877747, 668.001392656423491, 137.0, 34.0 ],
 					"text" : "REVERB"
 				}
 
@@ -8277,7 +8540,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1824.230699141819969, 38.997483217716194, 167.0, 60.0 ],
+					"patching_rect" : [ 1824.230699141819969, 38.997483217716194, 167.0, 62.0 ],
 					"text" : "NOTE GENERATOR"
 				}
 
@@ -8291,7 +8554,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 2759.400714556376442, 34.082506859302498, 172.0, 60.0 ],
+					"patching_rect" : [ 2759.400714556376442, 34.082506859302498, 172.0, 62.0 ],
 					"text" : "SINE TO SAW SYNTH"
 				}
 
@@ -8304,7 +8567,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1988.322112679481506, 275.874801474809601, 161.0, 33.0 ],
+					"patching_rect" : [ 1959.190704226493835, 264.432934170961403, 161.0, 34.0 ],
 					"text" : "BIG SAWPAD"
 				}
 
@@ -8318,7 +8581,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 630.095947186152443, 38.977317714691139, 149.000000000000114, 60.0 ],
+					"patching_rect" : [ 627.095947186152443, 41.977317714691139, 149.000000000000114, 62.0 ],
 					"text" : "ADDITIVE BELLS/PAD"
 				}
 
@@ -8332,7 +8595,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 2686.132983922958374, 1217.874797234945163, 137.0, 60.0 ],
+					"patching_rect" : [ 2750.132983922958374, 1079.873851621149925, 137.0, 62.0 ],
 					"text" : "VOCODED VIDEO"
 				}
 
@@ -8345,7 +8608,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 240.631426572799683, 664.641835081577483, 176.0, 33.0 ],
+					"patching_rect" : [ 240.631426572799683, 664.641835081577483, 176.0, 34.0 ],
 					"text" : "COLLISION FX"
 				}
 
@@ -9806,7 +10069,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 745.395947186152171, 300.477317714691139, 64.700000000000045, 22.0 ],
-					"text" : "72 100"
+					"text" : "79 100"
 				}
 
 			}
@@ -10380,7 +10643,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 41.0, 84.0, 1468.0, 713.0 ],
+						"rect" : [ 42.0, 85.0, 1468.0, 713.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -10426,7 +10689,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 846.0, 63.0, 150.0, 74.0 ],
+									"patching_rect" : [ 846.0, 63.0, 150.0, 75.0 ],
 									"text" : "twee delaylijnen met vier taps en willekeurige delaytijd waartussen gecrossfade wordt om klikjes te voorkomen"
 								}
 
@@ -10462,7 +10725,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 197.423999999999978, 746.0, 150.0, 33.0 ],
+									"patching_rect" : [ 197.423999999999978, 746.0, 150.0, 34.0 ],
 									"text" : "crossfade tussen de twee delaylines"
 								}
 
@@ -14474,6 +14737,16 @@
 						"subpatcher_template" : "",
 						"boxes" : [ 							{
 								"box" : 								{
+									"id" : "obj-10",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 751.0, 113.0, 150.0, 20.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"id" : "obj-19",
 									"maxclass" : "message",
 									"numinlets" : 2,
@@ -16161,7 +16434,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 401.515957355499268, 483.739319443702698, 50.0, 22.0 ],
-									"text" : "65 3"
+									"text" : "69 3"
 								}
 
 							}
@@ -16173,7 +16446,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 233.515957355499268, 488.5, 50.0, 22.0 ],
-									"text" : "71 3"
+									"text" : "62 3"
 								}
 
 							}
@@ -16317,7 +16590,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 401.515957355499268, 287.5, 29.5, 22.0 ],
-									"text" : "7"
+									"text" : "11"
 								}
 
 							}
@@ -16353,7 +16626,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 244.515957355499268, 287.5, 29.5, 22.0 ],
-									"text" : "0"
+									"text" : "7"
 								}
 
 							}
@@ -16389,7 +16662,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 82.015957355499268, 276.5, 29.5, 22.0 ],
-									"text" : "4"
+									"text" : "0"
 								}
 
 							}
@@ -17758,7 +18031,7 @@
 					"numinlets" : 5,
 					"numoutlets" : 6,
 					"outlettype" : [ "float", "float", "float", "float", "list", "" ],
-					"patching_rect" : [ 240.631426572799683, 699.752503460645244, 337.368573427200317, 76.260268652439549 ]
+					"patching_rect" : [ 240.631426572799683, 699.752503460645244, 337.368573427200317, 59.0 ]
 				}
 
 			}
@@ -17918,6 +18191,17 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-10",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 294.932624022165783, 570.260680556297302, 157.0, 20.0 ],
+									"text" : "yup, dit komt uit een helpfile"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"id" : "obj-7",
 									"maxclass" : "newobj",
@@ -18098,7 +18382,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 407.932624022165783, 374.760680556297302, 205.0, 54.0 ],
+									"patching_rect" : [ 407.932624022165783, 374.760680556297302, 205.0, 55.0 ],
 									"text" : "the counter is running backwards to make it easier to work with modulo (%)"
 								}
 
@@ -18110,7 +18394,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 491.432624022165783, 541.760680556297302, 199.0, 114.0 ],
+									"patching_rect" : [ 491.432624022165783, 541.760680556297302, 199.0, 117.0 ],
 									"style" : "helpfile_label",
 									"text" : "Video delays can be created using jit.matrixset with a 'circular buffer' setup.  The number of frames stored in the jit.matrixset specifies the maximum delay.  Assuming a 30 FPS framerate, the maximum delay for this example is one second."
 								}
@@ -18907,7 +19191,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 1525.0, 92.0, 1202.0, 863.0 ],
+						"rect" : [ 41.0, 84.0, 1468.0, 713.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -18935,6 +19219,30 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-6",
+									"linecount" : 4,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 865.0, 133.5, 150.0, 62.0 ],
+									"text" : "als er een video klaar is, wordt er direct een nieuwe geladen tenzij de gate dicht is"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-4",
+									"linecount" : 4,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 388.0, 257.0, 150.0, 62.0 ],
+									"text" : "de rss-feed komt bij [xml.parse] binnen en alle URL's worden in [coll] gezet"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"comment" : "",
 									"id" : "obj-2",
@@ -19738,7 +20046,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 2718.132983922958374, 715.964547346048221, 73.0, 33.0 ],
+					"patching_rect" : [ 2718.132983922958374, 715.964547346048221, 73.0, 34.0 ],
 					"text" : "regeneratie aan/uit"
 				}
 
@@ -19835,18 +20143,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-285",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "bang", "" ],
-					"patching_rect" : [ 2660.679792451858702, 1116.443186233453616, 107.0, 22.0 ],
-					"text" : "jit.window reclame"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"fontface" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -19855,7 +20151,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 2605.132983922958374, 811.964547346048221, 80.0, 35.0 ]
+					"patching_rect" : [ 2605.132983922958374, 811.964547346048221, 80.0, 36.0 ]
 				}
 
 			}
@@ -20238,7 +20534,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1609.230699141820423, 85.464547346048334, 70.0, 22.0 ],
+					"patching_rect" : [ 1607.5, 85.464547346048334, 70.0, 22.0 ],
 					"text" : "loadmess 0"
 				}
 
@@ -21634,7 +21930,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 856.679280519485474, 223.877316415309792, 49.0, 20.0 ],
+					"patching_rect" : [ 844.179280519485474, 199.44539467096331, 49.0, 20.0 ],
 					"text" : "velocity"
 				}
 
@@ -21743,7 +22039,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 1563.0, 125.0, 1208.0, 860.0 ],
+						"rect" : [ 1396.0, 125.0, 1208.0, 860.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -24015,7 +24311,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 1543.0, 88.0, 1206.0, 867.0 ],
+						"rect" : [ 1535.0, 90.0, 1204.0, 865.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -28973,7 +29269,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-285", 0 ],
+					"destination" : [ "obj-24", 0 ],
 					"source" : [ "obj-281", 0 ]
 				}
 
@@ -29513,8 +29809,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-285", 0 ],
-					"midpoints" : [ 2600.179792451858702, 1097.443186233453616, 2670.179792451858702, 1097.443186233453616 ],
+					"destination" : [ "obj-24", 0 ],
 					"source" : [ "obj-345", 0 ]
 				}
 
@@ -30640,92 +30935,92 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-385" : [ "number[8]", "number[8]", 0 ],
-			"obj-29" : [ "button[16]", "button[16]", 0 ],
-			"obj-204" : [ "number[6]", "number[6]", 0 ],
-			"obj-340" : [ "vocoVOL", "vocoder volume", 0 ],
-			"obj-74" : [ "multislider[2]", "multislider[2]", 0 ],
-			"obj-280" : [ "toggle[3]", "toggle[3]", 0 ],
-			"obj-141" : [ "droneInstability", "Instability", 0 ],
-			"obj-86" : [ "toggle[2]", "toggle[2]", 0 ],
-			"obj-197" : [ "resonance", "Q", 0 ],
-			"obj-59" : [ "multislider", "multislider", 0 ],
-			"obj-492" : [ "button[6]", "button[6]", 0 ],
-			"obj-94" : [ "toggle[1]", "toggle[1]", 0 ],
-			"obj-392" : [ "number[9]", "number[9]", 0 ],
-			"obj-333" : [ "reverbVOL[1]", "reverb", 0 ],
-			"obj-368::obj-234" : [ "echoes", "echoes", 0 ],
-			"obj-161" : [ "number[3]", "number[3]", 0 ],
-			"obj-215" : [ "live.dial[5]", "feedback", 0 ],
-			"obj-482" : [ "release", "release", 0 ],
-			"obj-39" : [ "modus", "modus", 0 ],
-			"obj-104" : [ "live.slider", "dry/wet", 0 ],
-			"obj-184" : [ "sendVOL[1]", "reverb", 0 ],
-			"obj-481" : [ "attack", "attack", 0 ],
-			"obj-81" : [ "number[2]", "number[2]", 0 ],
-			"obj-318" : [ "button[10]", "button[10]", 0 ],
-			"obj-122" : [ "button[13]", "button[13]", 0 ],
-			"obj-9" : [ "BRIGHTNESS", "BRIGHT", 0 ],
-			"obj-534" : [ "pingVOL", "ping volume", 0 ],
-			"obj-38" : [ "slider", "slider", 0 ],
-			"obj-233" : [ "videoContrast", "contrast", 0 ],
-			"obj-354" : [ "videoBrightness", "brightness", 0 ],
-			"obj-31" : [ "button[17]", "button[17]", 0 ],
 			"obj-213" : [ "number[7]", "number[7]", 0 ],
-			"obj-339" : [ "reverbVOL[3]", "reverb", 0 ],
-			"obj-530" : [ "sendVOL[4]", "reverb", 0 ],
-			"obj-274" : [ "toggle[4]", "toggle[4]", 0 ],
-			"obj-282" : [ "live.slider[8]", "dry/wet", 0 ],
+			"obj-486" : [ "button[5]", "button[5]", 0 ],
+			"obj-394" : [ "number[10]", "number[10]", 0 ],
+			"obj-215" : [ "live.dial[5]", "feedback", 0 ],
+			"obj-495" : [ "button[11]", "button[11]", 0 ],
+			"obj-64" : [ "detune", "detune", 0 ],
+			"obj-186" : [ "button[18]", "button[18]", 0 ],
 			"obj-344::obj-104" : [ "live.slider[1]", "1/2", 0 ],
 			"obj-91::obj-104" : [ "live.slider[6]", "1/2", 0 ],
-			"obj-147" : [ "button", "button", 0 ],
-			"obj-49" : [ "belVOL", "bell volume", 0 ],
-			"obj-551" : [ "button[8]", "button[8]", 0 ],
-			"obj-211::obj-104" : [ "live.slider[3]", "1/2", 0 ],
-			"obj-394" : [ "number[10]", "number[10]", 0 ],
-			"obj-50" : [ "number[1]", "number[1]", 0 ],
 			"obj-295" : [ "toggle[6]", "toggle[6]", 0 ],
-			"obj-154" : [ "number[4]", "number[4]", 0 ],
-			"obj-486" : [ "button[5]", "button[5]", 0 ],
-			"obj-495" : [ "button[11]", "button[11]", 0 ],
-			"obj-158" : [ "droneVOL[1]", "drone volume", 0 ],
-			"obj-112" : [ "padVOL", "pad volume", 0 ],
-			"obj-407" : [ "button[4]", "button[4]", 0 ],
+			"obj-147" : [ "button", "button", 0 ],
 			"obj-381" : [ "button[2]", "button[2]", 0 ],
+			"obj-50" : [ "number[1]", "number[1]", 0 ],
 			"obj-152" : [ "rainVOL", "rain volume", 0 ],
-			"obj-373" : [ "button[3]", "button[3]", 0 ],
-			"obj-64" : [ "detune", "detune", 0 ],
-			"obj-23" : [ "SPEED", "SPEED", 0 ],
-			"obj-66" : [ "multislider[1]", "multislider[1]", 0 ],
-			"obj-329" : [ "live.slider[2]", "dry/wet", 0 ],
-			"obj-255" : [ "button[9]", "button[9]", 0 ],
-			"obj-256" : [ "videoSaturation", "saturation", 0 ],
-			"obj-206" : [ "button[14]", "button[14]", 0 ],
-			"obj-337" : [ "number[11]", "number[11]", 0 ],
+			"obj-158" : [ "droneVOL[1]", "drone volume", 0 ],
+			"obj-59" : [ "multislider", "multislider", 0 ],
 			"obj-71" : [ "live.dial[2]", "feedback", 0 ],
-			"obj-119" : [ "live.slider[7]", "dry/wet", 0 ],
-			"obj-319" : [ "button[1]", "button[1]", 0 ],
-			"obj-263" : [ "toggle", "toggle", 0 ],
-			"obj-84" : [ "rslider", "rslider", 0 ],
-			"obj-334" : [ "grainVOL", "grain volume", 0 ],
-			"obj-269" : [ "videoSpeed", "speed", 0 ],
-			"obj-216" : [ "live.dial[3]", "feedback", 0 ],
-			"obj-51" : [ "mc.live.gain~", "MASTER", 0 ],
-			"obj-186" : [ "button[18]", "button[18]", 0 ],
-			"obj-245" : [ "button[15]", "button[15]", 0 ],
-			"obj-16" : [ "number", "number", 0 ],
+			"obj-233" : [ "videoContrast", "contrast", 0 ],
+			"obj-282" : [ "live.slider[8]", "dry/wet", 0 ],
+			"obj-482" : [ "release", "release", 0 ],
+			"obj-49" : [ "belVOL", "bell volume", 0 ],
+			"obj-354" : [ "videoBrightness", "brightness", 0 ],
+			"obj-274" : [ "toggle[4]", "toggle[4]", 0 ],
+			"obj-23" : [ "SPEED", "SPEED", 0 ],
+			"obj-329" : [ "live.slider[2]", "dry/wet", 0 ],
+			"obj-154" : [ "number[4]", "number[4]", 0 ],
+			"obj-333" : [ "reverbVOL[1]", "reverb", 0 ],
 			"obj-376" : [ "mc.live.gain~[3]", "mc.live.gain~[2]", 0 ],
-			"obj-229" : [ "number[5]", "number[5]", 0 ],
-			"obj-20" : [ "sendVOL", "reverb", 0 ],
-			"obj-375" : [ "mc.live.gain~[2]", "mc.live.gain~[2]", 0 ],
-			"obj-172" : [ "reverbVOL", "reverb", 0 ],
 			"obj-118" : [ "button[12]", "button[12]", 0 ],
-			"obj-253" : [ "toggle[5]", "toggle[5]", 0 ],
-			"obj-355" : [ "mc.live.gain~[1]", "REVERB", 0 ],
-			"obj-58" : [ "live.numbox", "live.numbox", 0 ],
-			"obj-65" : [ "toggle[7]", "toggle[7]", 0 ],
+			"obj-211::obj-104" : [ "live.slider[3]", "1/2", 0 ],
+			"obj-375" : [ "mc.live.gain~[2]", "mc.live.gain~[2]", 0 ],
+			"obj-66" : [ "multislider[1]", "multislider[1]", 0 ],
 			"obj-109" : [ "reverbVOL[2]", "reverb", 0 ],
+			"obj-255" : [ "button[9]", "button[9]", 0 ],
+			"obj-65" : [ "toggle[7]", "toggle[7]", 0 ],
+			"obj-39" : [ "modus", "modus", 0 ],
+			"obj-141" : [ "droneInstability", "Instability", 0 ],
+			"obj-263" : [ "toggle", "toggle", 0 ],
+			"obj-86" : [ "toggle[2]", "toggle[2]", 0 ],
+			"obj-58" : [ "live.numbox", "live.numbox", 0 ],
+			"obj-20" : [ "sendVOL", "reverb", 0 ],
+			"obj-16" : [ "number", "number", 0 ],
+			"obj-94" : [ "toggle[1]", "toggle[1]", 0 ],
+			"obj-172" : [ "reverbVOL", "reverb", 0 ],
+			"obj-229" : [ "number[5]", "number[5]", 0 ],
+			"obj-104" : [ "live.slider", "dry/wet", 0 ],
+			"obj-385" : [ "number[8]", "number[8]", 0 ],
+			"obj-340" : [ "vocoVOL", "vocoder volume", 0 ],
+			"obj-206" : [ "button[14]", "button[14]", 0 ],
+			"obj-31" : [ "button[17]", "button[17]", 0 ],
+			"obj-355" : [ "mc.live.gain~[1]", "REVERB", 0 ],
+			"obj-368::obj-234" : [ "echoes", "echoes", 0 ],
+			"obj-492" : [ "button[6]", "button[6]", 0 ],
+			"obj-216" : [ "live.dial[3]", "feedback", 0 ],
+			"obj-256" : [ "videoSaturation", "saturation", 0 ],
+			"obj-319" : [ "button[1]", "button[1]", 0 ],
+			"obj-119" : [ "live.slider[7]", "dry/wet", 0 ],
+			"obj-407" : [ "button[4]", "button[4]", 0 ],
+			"obj-269" : [ "videoSpeed", "speed", 0 ],
+			"obj-29" : [ "button[16]", "button[16]", 0 ],
+			"obj-373" : [ "button[3]", "button[3]", 0 ],
+			"obj-84" : [ "rslider", "rslider", 0 ],
+			"obj-204" : [ "number[6]", "number[6]", 0 ],
+			"obj-392" : [ "number[9]", "number[9]", 0 ],
+			"obj-122" : [ "button[13]", "button[13]", 0 ],
+			"obj-534" : [ "pingVOL", "ping volume", 0 ],
+			"obj-253" : [ "toggle[5]", "toggle[5]", 0 ],
+			"obj-74" : [ "multislider[2]", "multislider[2]", 0 ],
+			"obj-197" : [ "resonance", "Q", 0 ],
+			"obj-184" : [ "sendVOL[1]", "reverb", 0 ],
 			"obj-248" : [ "live.dial[4]", "FEEDBACK", 0 ],
+			"obj-81" : [ "number[2]", "number[2]", 0 ],
+			"obj-245" : [ "button[15]", "button[15]", 0 ],
+			"obj-280" : [ "toggle[3]", "toggle[3]", 0 ],
+			"obj-530" : [ "sendVOL[4]", "reverb", 0 ],
+			"obj-9" : [ "BRIGHTNESS", "BRIGHT", 0 ],
+			"obj-337" : [ "number[11]", "number[11]", 0 ],
+			"obj-339" : [ "reverbVOL[3]", "reverb", 0 ],
+			"obj-551" : [ "button[8]", "button[8]", 0 ],
+			"obj-161" : [ "number[3]", "number[3]", 0 ],
+			"obj-51" : [ "mc.live.gain~", "MASTER", 0 ],
+			"obj-318" : [ "button[10]", "button[10]", 0 ],
+			"obj-38" : [ "slider", "slider", 0 ],
+			"obj-334" : [ "grainVOL", "grain volume", 0 ],
+			"obj-481" : [ "attack", "attack", 0 ],
+			"obj-112" : [ "padVOL", "pad volume", 0 ],
 			"parameterbanks" : 			{
 
 			}
@@ -30734,77 +31029,85 @@
 ,
 		"dependency_cache" : [ 			{
 				"name" : "pfft-rain.maxpat",
-				"bootpath" : "~/OneDrive/Muziek/school/jaar 1/sysbas/eindopdracht/max concept1/concept1/patchers",
+				"bootpath" : "~/Documents/sysbas1-eind/max concept1/concept1/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "yafr2.maxpat",
-				"bootpath" : "~/OneDrive/Muziek/school/jaar 1/sysbas/eindopdracht/max concept1/concept1/patchers",
+				"bootpath" : "~/Documents/sysbas1-eind/max concept1/concept1/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "resoSaw.maxpat",
-				"bootpath" : "~/OneDrive/Muziek/school/jaar 1/sysbas/eindopdracht/max concept1/concept1/patchers",
+				"bootpath" : "~/Documents/sysbas1-eind/max concept1/concept1/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "xml.parse.maxpat",
-				"bootpath" : "~/OneDrive/Muziek/school/jaar 1/sysbas/eindopdracht/max concept1/concept1/patchers",
+				"bootpath" : "~/Documents/sysbas1-eind/max concept1/concept1/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "VocoSubpatch.maxpat",
-				"bootpath" : "~/OneDrive/Muziek/school/jaar 1/sysbas/eindopdracht/max concept1/concept1/patchers",
+				"bootpath" : "~/Documents/sysbas1-eind/max concept1/concept1/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "simpleSaw.maxpat",
-				"bootpath" : "~/OneDrive/Muziek/school/jaar 1/sysbas/eindopdracht/max concept1/concept1/patchers",
+				"bootpath" : "~/Documents/sysbas1-eind/max concept1/concept1/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "randomGrain.maxpat",
-				"bootpath" : "~/OneDrive/Muziek/school/jaar 1/sysbas/eindopdracht/max concept1/concept1/patchers",
+				"bootpath" : "~/Documents/sysbas1-eind/max concept1/concept1/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "echoArp.maxpat",
-				"bootpath" : "~/OneDrive/Muziek/school/jaar 1/sysbas/eindopdracht/max concept1/concept1/patchers",
+				"bootpath" : "~/Documents/sysbas1-eind/max concept1/concept1/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "oscAR.maxpat",
-				"bootpath" : "~/OneDrive/Muziek/school/jaar 1/sysbas/eindopdracht/max concept1/concept1/patchers",
+				"bootpath" : "~/Documents/sysbas1-eind/max concept1/concept1/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "sawPad.maxpat",
-				"bootpath" : "~/OneDrive/Muziek/school/jaar 1/sysbas/eindopdracht/max concept1/concept1/patchers",
+				"bootpath" : "~/Documents/sysbas1-eind/max concept1/concept1/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jit.movie~.mxo",
-				"type" : "iLaX"
+				"name" : "jit.movie~.mxe64",
+				"type" : "mx64"
+			}
+, 			{
+				"name" : "mxj.mxe64",
+				"type" : "mx64"
+			}
+, 			{
+				"name" : "jit.pass.mxe64",
+				"type" : "mx64"
 			}
  ],
 		"autosave" : 0
