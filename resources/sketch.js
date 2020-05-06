@@ -58,15 +58,9 @@ $(document).on('click', '#startBtn', function() {
     }, 1000);
 });
 
-$(document).on('click', '#haltBtn', function() {
-   noLoop();
-   client.sendMessage('/started', 0);
-});
-
 $(document).keyup(function(e) {
-   if(e.keyCode === 32) {
-       testBounce();
-   } else if(e.keyCode === 27) {
+    // Escape key as panic button
+    if(e.keyCode === 27) {
        noLoop();
    }
 });
@@ -76,8 +70,6 @@ function setup() {
     // Initialize the canvas at screen size
     createCanvas(windowWidth, (windowHeight - 100), WEBGL);
     angleMode(DEGREES);
-
-    debugMode();
 
     connect = new Connect();
     connect.connectToServer(function() {

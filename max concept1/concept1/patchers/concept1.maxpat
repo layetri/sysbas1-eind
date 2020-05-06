@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 1570.0, 77.0, 1212.0, 873.0 ],
+		"rect" : [ 434.0, 77.0, 1212.0, 873.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -734,7 +734,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 252.0, 116.318800550698825, 61.0, 22.0 ],
-									"text" : "0 7 11"
+									"text" : "4 0 7"
 								}
 
 							}
@@ -8035,7 +8035,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 2718.132983922958374, 1033.70386934679027, 70.0, 22.0 ],
-					"text" : "loadmess 1"
+					"text" : "loadmess 0"
 				}
 
 			}
@@ -8224,7 +8224,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1132.929280519485474, 675.363187098502635, 172.099290688832298, 34.0 ],
+					"patching_rect" : [ 1132.929280519485474, 675.363187098502635, 172.099290688832298, 33.0 ],
 					"text" : "FFT CLOUDS"
 				}
 
@@ -8250,7 +8250,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1325.602634191513062, 24.364547729492188, 103.897365808486938, 62.0 ],
+					"patching_rect" : [ 1325.602634191513062, 24.364547729492188, 103.897365808486938, 60.0 ],
 					"text" : "FM DRONE"
 				}
 
@@ -8263,7 +8263,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 15.627659916877747, 668.001392656423491, 137.0, 34.0 ],
+					"patching_rect" : [ 15.627659916877747, 668.001392656423491, 137.0, 33.0 ],
 					"text" : "REVERB"
 				}
 
@@ -8277,7 +8277,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1824.230699141819969, 38.997483217716194, 167.0, 62.0 ],
+					"patching_rect" : [ 1824.230699141819969, 38.997483217716194, 167.0, 60.0 ],
 					"text" : "NOTE GENERATOR"
 				}
 
@@ -8291,7 +8291,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 2759.400714556376442, 34.082506859302498, 172.0, 62.0 ],
+					"patching_rect" : [ 2759.400714556376442, 34.082506859302498, 172.0, 60.0 ],
 					"text" : "SINE TO SAW SYNTH"
 				}
 
@@ -8304,7 +8304,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1988.322112679481506, 275.874801474809601, 161.0, 34.0 ],
+					"patching_rect" : [ 1988.322112679481506, 275.874801474809601, 161.0, 33.0 ],
 					"text" : "BIG SAWPAD"
 				}
 
@@ -8318,7 +8318,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 630.095947186152443, 38.977317714691139, 149.000000000000114, 62.0 ],
+					"patching_rect" : [ 630.095947186152443, 38.977317714691139, 149.000000000000114, 60.0 ],
 					"text" : "ADDITIVE BELLS/PAD"
 				}
 
@@ -8332,7 +8332,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 2686.132983922958374, 1217.874797234945163, 137.0, 62.0 ],
+					"patching_rect" : [ 2686.132983922958374, 1217.874797234945163, 137.0, 60.0 ],
 					"text" : "VOCODED VIDEO"
 				}
 
@@ -8345,7 +8345,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 240.631426572799683, 664.641835081577483, 176.0, 34.0 ],
+					"patching_rect" : [ 240.631426572799683, 664.641835081577483, 176.0, 33.0 ],
 					"text" : "COLLISION FX"
 				}
 
@@ -9806,7 +9806,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 745.395947186152171, 300.477317714691139, 64.700000000000045, 22.0 ],
-					"text" : "79 100"
+					"text" : "72 100"
 				}
 
 			}
@@ -10407,7 +10407,6 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-16",
@@ -10427,7 +10426,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 846.0, 63.0, 150.0, 75.0 ],
+									"patching_rect" : [ 846.0, 63.0, 150.0, 74.0 ],
 									"text" : "twee delaylijnen met vier taps en willekeurige delaytijd waartussen gecrossfade wordt om klikjes te voorkomen"
 								}
 
@@ -10463,7 +10462,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 197.423999999999978, 746.0, 150.0, 34.0 ],
+									"patching_rect" : [ 197.423999999999978, 746.0, 150.0, 33.0 ],
 									"text" : "crossfade tussen de twee delaylines"
 								}
 
@@ -16162,7 +16161,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 401.515957355499268, 483.739319443702698, 50.0, 22.0 ],
-									"text" : "60 3"
+									"text" : "65 3"
 								}
 
 							}
@@ -16174,7 +16173,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 233.515957355499268, 488.5, 50.0, 22.0 ],
-									"text" : "65 3"
+									"text" : "71 3"
 								}
 
 							}
@@ -16318,7 +16317,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 401.515957355499268, 287.5, 29.5, 22.0 ],
-									"text" : "11"
+									"text" : "7"
 								}
 
 							}
@@ -16354,7 +16353,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 244.515957355499268, 287.5, 29.5, 22.0 ],
-									"text" : "7"
+									"text" : "0"
 								}
 
 							}
@@ -16390,7 +16389,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 82.015957355499268, 276.5, 29.5, 22.0 ],
-									"text" : "0"
+									"text" : "4"
 								}
 
 							}
@@ -19739,7 +19738,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 2718.132983922958374, 715.964547346048221, 73.0, 34.0 ],
+					"patching_rect" : [ 2718.132983922958374, 715.964547346048221, 73.0, 33.0 ],
 					"text" : "regeneratie aan/uit"
 				}
 
@@ -19856,7 +19855,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 2605.132983922958374, 811.964547346048221, 80.0, 36.0 ]
+					"patching_rect" : [ 2605.132983922958374, 811.964547346048221, 80.0, 35.0 ]
 				}
 
 			}
@@ -30641,92 +30640,92 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-216" : [ "live.dial[3]", "feedback", 0 ],
-			"obj-253" : [ "toggle[5]", "toggle[5]", 0 ],
-			"obj-334" : [ "grainVOL", "grain volume", 0 ],
-			"obj-319" : [ "button[1]", "button[1]", 0 ],
-			"obj-74" : [ "multislider[2]", "multislider[2]", 0 ],
-			"obj-492" : [ "button[6]", "button[6]", 0 ],
-			"obj-206" : [ "button[14]", "button[14]", 0 ],
-			"obj-112" : [ "padVOL", "pad volume", 0 ],
-			"obj-269" : [ "videoSpeed", "speed", 0 ],
-			"obj-344::obj-104" : [ "live.slider[1]", "1/2", 0 ],
-			"obj-147" : [ "button", "button", 0 ],
-			"obj-229" : [ "number[5]", "number[5]", 0 ],
-			"obj-394" : [ "number[10]", "number[10]", 0 ],
-			"obj-64" : [ "detune", "detune", 0 ],
-			"obj-495" : [ "button[11]", "button[11]", 0 ],
-			"obj-71" : [ "live.dial[2]", "feedback", 0 ],
-			"obj-295" : [ "toggle[6]", "toggle[6]", 0 ],
-			"obj-245" : [ "button[15]", "button[15]", 0 ],
-			"obj-91::obj-104" : [ "live.slider[6]", "1/2", 0 ],
-			"obj-534" : [ "pingVOL", "ping volume", 0 ],
-			"obj-20" : [ "sendVOL", "reverb", 0 ],
-			"obj-481" : [ "attack", "attack", 0 ],
-			"obj-172" : [ "reverbVOL", "reverb", 0 ],
-			"obj-233" : [ "videoContrast", "contrast", 0 ],
-			"obj-86" : [ "toggle[2]", "toggle[2]", 0 ],
-			"obj-381" : [ "button[2]", "button[2]", 0 ],
-			"obj-154" : [ "number[4]", "number[4]", 0 ],
-			"obj-355" : [ "mc.live.gain~[1]", "REVERB", 0 ],
-			"obj-204" : [ "number[6]", "number[6]", 0 ],
-			"obj-94" : [ "toggle[1]", "toggle[1]", 0 ],
-			"obj-354" : [ "videoBrightness", "brightness", 0 ],
-			"obj-29" : [ "button[16]", "button[16]", 0 ],
-			"obj-482" : [ "release", "release", 0 ],
-			"obj-329" : [ "live.slider[2]", "dry/wet", 0 ],
-			"obj-141" : [ "droneInstability", "Instability", 0 ],
-			"obj-340" : [ "vocoVOL", "vocoder volume", 0 ],
-			"obj-280" : [ "toggle[3]", "toggle[3]", 0 ],
-			"obj-376" : [ "mc.live.gain~[3]", "mc.live.gain~[2]", 0 ],
-			"obj-59" : [ "multislider", "multislider", 0 ],
-			"obj-530" : [ "sendVOL[4]", "reverb", 0 ],
-			"obj-263" : [ "toggle", "toggle", 0 ],
-			"obj-333" : [ "reverbVOL[1]", "reverb", 0 ],
-			"obj-197" : [ "resonance", "Q", 0 ],
-			"obj-375" : [ "mc.live.gain~[2]", "mc.live.gain~[2]", 0 ],
-			"obj-9" : [ "BRIGHTNESS", "BRIGHT", 0 ],
-			"obj-186" : [ "button[18]", "button[18]", 0 ],
-			"obj-16" : [ "number", "number", 0 ],
-			"obj-109" : [ "reverbVOL[2]", "reverb", 0 ],
-			"obj-118" : [ "button[12]", "button[12]", 0 ],
-			"obj-58" : [ "live.numbox", "live.numbox", 0 ],
-			"obj-368::obj-234" : [ "echoes", "echoes", 0 ],
-			"obj-211::obj-104" : [ "live.slider[3]", "1/2", 0 ],
-			"obj-104" : [ "live.slider", "dry/wet", 0 ],
-			"obj-407" : [ "button[4]", "button[4]", 0 ],
-			"obj-152" : [ "rainVOL", "rain volume", 0 ],
-			"obj-486" : [ "button[5]", "button[5]", 0 ],
-			"obj-255" : [ "button[9]", "button[9]", 0 ],
-			"obj-65" : [ "toggle[7]", "toggle[7]", 0 ],
-			"obj-373" : [ "button[3]", "button[3]", 0 ],
-			"obj-49" : [ "belVOL", "bell volume", 0 ],
-			"obj-215" : [ "live.dial[5]", "feedback", 0 ],
-			"obj-23" : [ "SPEED", "SPEED", 0 ],
-			"obj-184" : [ "sendVOL[1]", "reverb", 0 ],
-			"obj-81" : [ "number[2]", "number[2]", 0 ],
 			"obj-385" : [ "number[8]", "number[8]", 0 ],
-			"obj-256" : [ "videoSaturation", "saturation", 0 ],
-			"obj-282" : [ "live.slider[8]", "dry/wet", 0 ],
-			"obj-213" : [ "number[7]", "number[7]", 0 ],
-			"obj-318" : [ "button[10]", "button[10]", 0 ],
-			"obj-31" : [ "button[17]", "button[17]", 0 ],
-			"obj-161" : [ "number[3]", "number[3]", 0 ],
-			"obj-66" : [ "multislider[1]", "multislider[1]", 0 ],
-			"obj-339" : [ "reverbVOL[3]", "reverb", 0 ],
-			"obj-274" : [ "toggle[4]", "toggle[4]", 0 ],
-			"obj-119" : [ "live.slider[7]", "dry/wet", 0 ],
+			"obj-29" : [ "button[16]", "button[16]", 0 ],
+			"obj-204" : [ "number[6]", "number[6]", 0 ],
+			"obj-340" : [ "vocoVOL", "vocoder volume", 0 ],
+			"obj-74" : [ "multislider[2]", "multislider[2]", 0 ],
+			"obj-280" : [ "toggle[3]", "toggle[3]", 0 ],
+			"obj-141" : [ "droneInstability", "Instability", 0 ],
+			"obj-86" : [ "toggle[2]", "toggle[2]", 0 ],
+			"obj-197" : [ "resonance", "Q", 0 ],
+			"obj-59" : [ "multislider", "multislider", 0 ],
+			"obj-492" : [ "button[6]", "button[6]", 0 ],
+			"obj-94" : [ "toggle[1]", "toggle[1]", 0 ],
 			"obj-392" : [ "number[9]", "number[9]", 0 ],
-			"obj-84" : [ "rslider", "rslider", 0 ],
-			"obj-122" : [ "button[13]", "button[13]", 0 ],
+			"obj-333" : [ "reverbVOL[1]", "reverb", 0 ],
+			"obj-368::obj-234" : [ "echoes", "echoes", 0 ],
+			"obj-161" : [ "number[3]", "number[3]", 0 ],
+			"obj-215" : [ "live.dial[5]", "feedback", 0 ],
+			"obj-482" : [ "release", "release", 0 ],
 			"obj-39" : [ "modus", "modus", 0 ],
-			"obj-551" : [ "button[8]", "button[8]", 0 ],
+			"obj-104" : [ "live.slider", "dry/wet", 0 ],
+			"obj-184" : [ "sendVOL[1]", "reverb", 0 ],
+			"obj-481" : [ "attack", "attack", 0 ],
+			"obj-81" : [ "number[2]", "number[2]", 0 ],
+			"obj-318" : [ "button[10]", "button[10]", 0 ],
+			"obj-122" : [ "button[13]", "button[13]", 0 ],
+			"obj-9" : [ "BRIGHTNESS", "BRIGHT", 0 ],
+			"obj-534" : [ "pingVOL", "ping volume", 0 ],
 			"obj-38" : [ "slider", "slider", 0 ],
-			"obj-337" : [ "number[11]", "number[11]", 0 ],
+			"obj-233" : [ "videoContrast", "contrast", 0 ],
+			"obj-354" : [ "videoBrightness", "brightness", 0 ],
+			"obj-31" : [ "button[17]", "button[17]", 0 ],
+			"obj-213" : [ "number[7]", "number[7]", 0 ],
+			"obj-339" : [ "reverbVOL[3]", "reverb", 0 ],
+			"obj-530" : [ "sendVOL[4]", "reverb", 0 ],
+			"obj-274" : [ "toggle[4]", "toggle[4]", 0 ],
+			"obj-282" : [ "live.slider[8]", "dry/wet", 0 ],
+			"obj-344::obj-104" : [ "live.slider[1]", "1/2", 0 ],
+			"obj-91::obj-104" : [ "live.slider[6]", "1/2", 0 ],
+			"obj-147" : [ "button", "button", 0 ],
+			"obj-49" : [ "belVOL", "bell volume", 0 ],
+			"obj-551" : [ "button[8]", "button[8]", 0 ],
+			"obj-211::obj-104" : [ "live.slider[3]", "1/2", 0 ],
+			"obj-394" : [ "number[10]", "number[10]", 0 ],
 			"obj-50" : [ "number[1]", "number[1]", 0 ],
+			"obj-295" : [ "toggle[6]", "toggle[6]", 0 ],
+			"obj-154" : [ "number[4]", "number[4]", 0 ],
+			"obj-486" : [ "button[5]", "button[5]", 0 ],
+			"obj-495" : [ "button[11]", "button[11]", 0 ],
 			"obj-158" : [ "droneVOL[1]", "drone volume", 0 ],
-			"obj-248" : [ "live.dial[4]", "FEEDBACK", 0 ],
+			"obj-112" : [ "padVOL", "pad volume", 0 ],
+			"obj-407" : [ "button[4]", "button[4]", 0 ],
+			"obj-381" : [ "button[2]", "button[2]", 0 ],
+			"obj-152" : [ "rainVOL", "rain volume", 0 ],
+			"obj-373" : [ "button[3]", "button[3]", 0 ],
+			"obj-64" : [ "detune", "detune", 0 ],
+			"obj-23" : [ "SPEED", "SPEED", 0 ],
+			"obj-66" : [ "multislider[1]", "multislider[1]", 0 ],
+			"obj-329" : [ "live.slider[2]", "dry/wet", 0 ],
+			"obj-255" : [ "button[9]", "button[9]", 0 ],
+			"obj-256" : [ "videoSaturation", "saturation", 0 ],
+			"obj-206" : [ "button[14]", "button[14]", 0 ],
+			"obj-337" : [ "number[11]", "number[11]", 0 ],
+			"obj-71" : [ "live.dial[2]", "feedback", 0 ],
+			"obj-119" : [ "live.slider[7]", "dry/wet", 0 ],
+			"obj-319" : [ "button[1]", "button[1]", 0 ],
+			"obj-263" : [ "toggle", "toggle", 0 ],
+			"obj-84" : [ "rslider", "rslider", 0 ],
+			"obj-334" : [ "grainVOL", "grain volume", 0 ],
+			"obj-269" : [ "videoSpeed", "speed", 0 ],
+			"obj-216" : [ "live.dial[3]", "feedback", 0 ],
 			"obj-51" : [ "mc.live.gain~", "MASTER", 0 ],
+			"obj-186" : [ "button[18]", "button[18]", 0 ],
+			"obj-245" : [ "button[15]", "button[15]", 0 ],
+			"obj-16" : [ "number", "number", 0 ],
+			"obj-376" : [ "mc.live.gain~[3]", "mc.live.gain~[2]", 0 ],
+			"obj-229" : [ "number[5]", "number[5]", 0 ],
+			"obj-20" : [ "sendVOL", "reverb", 0 ],
+			"obj-375" : [ "mc.live.gain~[2]", "mc.live.gain~[2]", 0 ],
+			"obj-172" : [ "reverbVOL", "reverb", 0 ],
+			"obj-118" : [ "button[12]", "button[12]", 0 ],
+			"obj-253" : [ "toggle[5]", "toggle[5]", 0 ],
+			"obj-355" : [ "mc.live.gain~[1]", "REVERB", 0 ],
+			"obj-58" : [ "live.numbox", "live.numbox", 0 ],
+			"obj-65" : [ "toggle[7]", "toggle[7]", 0 ],
+			"obj-109" : [ "reverbVOL[2]", "reverb", 0 ],
+			"obj-248" : [ "live.dial[4]", "FEEDBACK", 0 ],
 			"parameterbanks" : 			{
 
 			}
@@ -30735,85 +30734,77 @@
 ,
 		"dependency_cache" : [ 			{
 				"name" : "pfft-rain.maxpat",
-				"bootpath" : "~/Documents/sysbas1-eind/max concept1/concept1/patchers",
+				"bootpath" : "~/OneDrive/Muziek/school/jaar 1/sysbas/eindopdracht/max concept1/concept1/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "yafr2.maxpat",
-				"bootpath" : "~/Documents/sysbas1-eind/max concept1/concept1/patchers",
+				"bootpath" : "~/OneDrive/Muziek/school/jaar 1/sysbas/eindopdracht/max concept1/concept1/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "resoSaw.maxpat",
-				"bootpath" : "~/Documents/sysbas1-eind/max concept1/concept1/patchers",
+				"bootpath" : "~/OneDrive/Muziek/school/jaar 1/sysbas/eindopdracht/max concept1/concept1/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "xml.parse.maxpat",
-				"bootpath" : "~/Documents/sysbas1-eind/max concept1/concept1/patchers",
+				"bootpath" : "~/OneDrive/Muziek/school/jaar 1/sysbas/eindopdracht/max concept1/concept1/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "VocoSubpatch.maxpat",
-				"bootpath" : "~/Documents/sysbas1-eind/max concept1/concept1/patchers",
+				"bootpath" : "~/OneDrive/Muziek/school/jaar 1/sysbas/eindopdracht/max concept1/concept1/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "simpleSaw.maxpat",
-				"bootpath" : "~/Documents/sysbas1-eind/max concept1/concept1/patchers",
+				"bootpath" : "~/OneDrive/Muziek/school/jaar 1/sysbas/eindopdracht/max concept1/concept1/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "randomGrain.maxpat",
-				"bootpath" : "~/Documents/sysbas1-eind/max concept1/concept1/patchers",
+				"bootpath" : "~/OneDrive/Muziek/school/jaar 1/sysbas/eindopdracht/max concept1/concept1/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "echoArp.maxpat",
-				"bootpath" : "~/Documents/sysbas1-eind/max concept1/concept1/patchers",
+				"bootpath" : "~/OneDrive/Muziek/school/jaar 1/sysbas/eindopdracht/max concept1/concept1/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "oscAR.maxpat",
-				"bootpath" : "~/Documents/sysbas1-eind/max concept1/concept1/patchers",
+				"bootpath" : "~/OneDrive/Muziek/school/jaar 1/sysbas/eindopdracht/max concept1/concept1/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "sawPad.maxpat",
-				"bootpath" : "~/Documents/sysbas1-eind/max concept1/concept1/patchers",
+				"bootpath" : "~/OneDrive/Muziek/school/jaar 1/sysbas/eindopdracht/max concept1/concept1/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "jit.movie~.mxe64",
-				"type" : "mx64"
-			}
-, 			{
-				"name" : "mxj.mxe64",
-				"type" : "mx64"
-			}
-, 			{
-				"name" : "jit.pass.mxe64",
-				"type" : "mx64"
+				"name" : "jit.movie~.mxo",
+				"type" : "iLaX"
 			}
  ],
 		"autosave" : 0
