@@ -7,32 +7,38 @@
 //
 // ======================================================================================= //
 
+// Object variables
 let player, viewer, world;
+
+// Obstacles
 let obstacles = [];
 let obstacleNum = 4;
 
+// Renderer variables
 let rayX = 0;
 let rayZ = 0;
 let fov = 1600;
-
 let rayInvert = false;
+
+// Positioning variables
 let xzAngle = 0;
 
+// Master clock variables
 let clock = 0;
 let length = 120;
 let interval;
 let started = false;
 let ended = false;
 
+// Colors and theming variables
 let bg = [168, 241, 255];
 let bgw = [168, 241, 255];
 let bgw_dir = ['up', 'up', 'up'];
 let bgw_bor = [180, 240];
 let lamp = [120, 120, 90];
-
 let nightMode = false;
 
-// OSC stuff
+// OSC variables
 let client, connect;
 
 // DOM functions //
