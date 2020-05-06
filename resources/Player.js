@@ -154,7 +154,7 @@ class Player {
             }
         }
     }
-    bounceOff(spd, collisions) {
+    bounceOff(spd) {
         this.selfControlled = true;
         noLoop();
         client.sendMessage('/bouncing', 1);
@@ -184,6 +184,6 @@ class Player {
     }
 }
 
-function calcBounce(t, total, offset) {
+function calcBounce(t, total) {
     return 0.5 * (Math.pow(((t + 300) - (total / 2)), 2) / 50000);
 }

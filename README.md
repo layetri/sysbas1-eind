@@ -32,16 +32,30 @@ First, in the `setup()` of `sketch.js`, a new `Player()` is created with the `fo
 ### `Obstacle` class
 
 #### Methods
+- `draw()`
+- `move()`
+- `gravity()`
+
 #### Usage
 
 ### `Terrain` class
 
 #### Methods
+- `init()`
+- `draw()`
+
 #### Usage
 
 ### `World` class
 
 #### Methods
+- `init()`
+- `draw()`
+- `fillArea()`
+- `applyFOV()`
+- `getCurrentPlane()`
+- `getCurrentY()`
+
 #### Usage
 
 ## OSC Routes
